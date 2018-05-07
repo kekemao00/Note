@@ -3,10 +3,11 @@
 
 - GitHub
   - [Github 高质量连接]
-- Android 
+- Android  
   - [蓝牙权限]
   - [去除虚拟按键]
-  - [java 获取当前行]
+  - [java 获取当前行]  
+  ~~4567~~
 
 
 
