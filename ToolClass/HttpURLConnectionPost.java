@@ -7,10 +7,17 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import com.google.gson.Gson;
+
 public class HttpURLConnectionPost {
-	
+
 	public static void main(String[] yaogenigedapiyanzi) {
-		System.err.println(doJsonPost("http://opapi.xflqv.cn/app/queryCurrentAppVersion", "{\"appType\":8}"));
+		// System.out.println(doJsonPost("http://opapi.xflqv.cn/app/queryCurrentAppVersion",
+		// "{\"appType\":8}"));
+		String jsonOTA = doJsonPost("http://opapi.xflqv.cn/app/queryCurrentAppVersion", "{\"appType\":8}");
+		Gson gson = new Gson();
+		Obj obj = gson.fromJson(jsonOTA, Obj.class);
+		System.out.println(obj.toString());
 	}
 
 	public static String doJsonPost(String urlPath, String Json) {
@@ -53,4 +60,43 @@ public class HttpURLConnectionPost {
 		return result;
 	}
 
+}
+
+class Obj {
+	String code;
+	String msg;
+	String map;
+	String innerResult;
+	Data data;
+
+	@Override
+	public String toString() {
+		return "Obj [code=" + code + ", msg=" + msg + ", map=" + map + ", innerResult=" + innerResult + ", data=" + data
+				+ "]";
+	}
+}
+
+class Data {
+	String id;
+	String versionCode;
+
+	String versionName;
+	String type;
+	String content;
+	String createTime;
+	String url;
+	String md5;
+	String fileName;
+	String fileSize;
+	String uploadId;
+	String updateTime;
+	String isDelete;
+
+	@Override
+	public String toString() {
+		return "Data [id=" + id + ", versionCode=" + versionCode + ", versionName=" + versionName + ", type=" + type
+				+ ", content=" + content + ", createTime=" + createTime + ", url=" + url + ", md5=" + md5
+				+ ", fileName=" + fileName + ", fileSize=" + fileSize + ", uploadId=" + uploadId + ", updateTime="
+				+ updateTime + ", isDelete=" + isDelete + "]";
+	}
 }
