@@ -1,6 +1,17 @@
 # Git(持续更新) 
 *[git 使用简易指南]*  
- 实用且用过的命令,记录下来
+实用且用过的命令,记录下来
+
+## git add (暂存区)的撤销  
+```
+git reset HEAD 
+```
+如果后面什么都不跟的话 就是上一次add 里面的全部撤销了  
+```
+git reset HEAD XXX/XXX/XXX.java 
+```
+就是对某个文件进行撤销了  
+
 ## 修改提交记录  
  ```
  git commit --amend --no-edit
@@ -112,8 +123,16 @@ v0.1
 v1.3  
 v1.4  
 ```
-
-
+标签推送:  
+``` bash
+$ git push origin  v1.0    // 推送某个标签到远程
+$ git push origin --tags   // 推送所有标签到远程
+```
+标签删除:  
+``` bash
+$ git tag -d v0.1                  // 删除 本地v0.1 标签 
+$ git push origin :refs/tags/v0.1 // 将本地删除的标签在远程也同步删除
+```
 ##  其他
 
 - 内建的图形化 git：
