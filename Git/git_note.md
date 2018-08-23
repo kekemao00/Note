@@ -3,25 +3,25 @@
 实用且用过的命令,记录下来
 
 ## git add (暂存区)的撤销  
-```
+```bash
 git reset HEAD 
 ```
 如果后面什么都不跟的话 就是上一次add 里面的全部撤销了  
-```
+```bash
 git reset HEAD XXX/XXX/XXX.java 
 ```
 就是对某个文件进行撤销了  
 
 ## 修改提交记录  
- ```
+ ```bash
  git commit --amend --no-edit
  
  git commit --amend -m "fix"
  
  git log --oneline
  ```
- 
- ```
+
+ ```bash
  $ echo 'Hello voidint' >> README.md
  $ git add .
  $ git commit --amend --no-edit
@@ -31,7 +31,7 @@ git reset HEAD XXX/XXX/XXX.java
 
 
 ## 日志 
-```	
+```	bash
 $ git log
 $ git lg   
 $ #
@@ -39,7 +39,7 @@ $ git reflog
 ```
 
 ## pull
-```
+```bash
 1. stash changes()    /revert
 2. pull
 4. unstash changes (Pop stash)  /合并
@@ -49,14 +49,14 @@ $ git reflog
 ```
 ---
 ## 移除文件
-```
+```bash
 git rm --cached (-r 文件夹) files-path   
 ```
 
 ## 仓库操作
 - 移除远程仓库
 	
-	```
+	```bash
 	git remote rm origin  
 	```
 
@@ -90,7 +90,7 @@ Git 鼓励大量使用分支：
 
 - __`git add`后的撤销操作:__ `git reset HEAD XXX/XXX/XXX.java`
 
-### 重写历史提交记录
+## 重写历史提交记录
 
 - __显示HEAD更改时间的列表__ `git reflog`  
 
@@ -113,7 +113,7 @@ Git 鼓励大量使用分支：
 ## git tag
 
 __含附注的标签:__ 
- 
+
 创建一个含附注类型的标签非常简单，用 -a （译注：取 annotated 的首字母）指定标签名字即可：  
 
 ``` bash
@@ -137,34 +137,37 @@ $ git push origin :refs/tags/v0.1 // 将本地删除的标签在远程也同步�
 
 - 内建的图形化 git：
 
-	```
-	gitk
-	```  
+  ```bash
+  gitk
+  ```
 
 - 彩色的 git 输出：
 
-	```
-	git config color.ui true
-	```
-  
+  ```bash
+  git config color.ui true
+  ```
+
 - 显示历史记录时，只显示一行注释信息：
 
-	```
-	git config format.pretty oneline
-	```
+  ```bash
+  git config format.pretty oneline
+  ```
 - 交互地添加文件至缓存区：
 
-	```
-	git add -i
-	```
+  ```bash
+  git add -i
+  ```
 
+- git  回退单个文件到指定版本
 
-
+  ```bash
+  git checkout <HEAD> <file>
+  ```
 
 ---
 
 [改变最后的提交]:https://www.atlassian.com/git/tutorials/rewriting-history
-[更改旧的或多个提交]:[改变最后的提交]
+[更改旧的或多个提交]:改变最后的提交
 [清除历史提交记录中的敏感信息]:http://debugtalk.com/post/clean-sensitive-data-from-git-history-commits/
 [git 使用简易指南]:http://www.bootcss.com/p/git-guide/
 
