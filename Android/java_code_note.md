@@ -28,3 +28,15 @@ DigestUtils.md5Hex(new FileInputStream(path));
 如果你只需要使用标准的 MD5，其实一行代码就够了，使用 Apache 的 commons-codec 包就提供了获取 16 进制 MD5 值的方法。其底层实现上，也是分多次将一个文件读入，类似方法三。所以性能上也不错。 
 
 OR 使用 windows 自带的命令即可：`certutil -hashfile [文件路径] MD5`
+
+
+
+## 检测代码是否在主线程上运行通常如下所示：
+
+```java
+	if（Looper.myLooper（）== Looper.getMainLooper（））{
+		//在主线程上运行
+	} else {
+		//没有在主线程上运行
+	}
+```
