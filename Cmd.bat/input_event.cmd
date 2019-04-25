@@ -1,4 +1,8 @@
 :: 本文件用于模拟点击 Android 屏幕
+
+::   Back:4
+::	 $adb shell input keyevent 26 # wakeup
+::   $adb shell input keyevent 82 # unlock
 echo off
 color a 
 :loope
@@ -25,7 +29,8 @@ if %a% ==0 goto exit_
 else 
 goto loope
 :scanner_page
-adb shell input tap  540 283
+::adb shell input tap  540 283
+adb shell input tap  74 159
 goto loope 
 
 :add_goods
