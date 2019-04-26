@@ -164,6 +164,15 @@ $ git push origin :refs/tags/v0.1 // 将本地删除的标签在远程也同步�
   git checkout <HEAD> <file>
   ```
 
+
+- Q1: git rebase
+git rebase 将当前分支移植到指定分支或指定commit之上。
+
+
+- Q2: git cherrypick
+git cherry-pick命令”复制”一个提交节点并在当前分支做一次完全一样的新提交。
+
+
 ---
 
 [改变最后的提交]:https://www.atlassian.com/git/tutorials/rewriting-history
