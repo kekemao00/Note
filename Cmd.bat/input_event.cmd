@@ -29,8 +29,9 @@ if %a% ==0 goto exit_
 else 
 goto loope
 :scanner_page
-::adb shell input tap  540 283
-adb shell input tap  74 159
+adb shell input tap  540 283
+:: 关闭设备升级
+::adb shell input tap  74 159 
 goto loope 
 
 :add_goods
