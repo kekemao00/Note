@@ -3,6 +3,7 @@
 3. 正则表达式
 4. log  等级
 5. findbugs
+6. BigDecimal 采坑
 
 
 

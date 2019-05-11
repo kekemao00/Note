@@ -30,32 +30,41 @@ else
 goto loope
 :scanner_page
 adb shell input tap  540 283
+adb shell input tap  540 383
+
 :: 关闭设备升级
-::adb shell input tap  74 159 
+::adb shell input tap  62 88 
+
 goto loope 
 
 :add_goods
 adb shell input tap  527 1755
+adb shell input tap  527 1855
 goto loope
 
 :add_
 adb shell input tap  835 185
+adb shell input tap  835 285
 goto loope
 
 :sub_
 adb shell input tap  900 185
+adb shell input tap  900 285
 goto loope
 
 :clear_
 adb shell input tap  870 1755
+adb shell input tap  870 1855
 goto loope
 
 :back_
 adb shell input tap  527 1805
+adb shell input tap  527 1905
 goto loope
 
 :seet_
 adb shell input tap  998 1625
+adb shell input tap  998 1725
 goto loope
 
 :exit_
