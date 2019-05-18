@@ -59,7 +59,7 @@ goto loope
 
 :back_
 adb shell input tap  527 1805
-adb shell input tap  527 1905
+::adb shell input tap  527 1905
 goto loope
 
 :seet_
