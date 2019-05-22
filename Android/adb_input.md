@@ -23,3 +23,16 @@ adb shell input swipe 30 1 30 100
 ```
 
   模拟手指从 (30,1) 到 (30,100) 的滑动动作
+
+
+-  栈顶 Activity
+```bash
+	linux:
+
+	adb shell dumpsys activity | grep "mFocusedActivity"
+
+
+	windows:
+
+	adb shell dumpsys activity | findstr "mFocusedActivity"
+```
